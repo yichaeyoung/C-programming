@@ -8,6 +8,7 @@ if num:
     num=int(num)
     except Exception:
       exit('Error: the INPUT_NUM provided ("{}") is not an integer'.format(num))
+      'requirements.txt'
 else:
   num=1
  
