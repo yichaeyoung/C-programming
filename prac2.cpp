@@ -1,14 +1,36 @@
 #include <iostream>
+using namespace std;
+/*
+class Rectangle {
+public:
+	int width;
+	int height;
+	double getArea();
+};
 
-double area(int r);
+double Rectangle::getArea() {
+	return width * height;
+}
+*/
+class Rectangle {
+public:
+	int width;
+	int height;
+	double getArea();
+};
+
+double Rectangle::getArea() {
+
+	return width* height;	//반환 중요!!!!
+
+}
+
 
 int main() {
-	int n = 3;
-	char c = '#';
-	std::cout << c << 5.5 << '-' << n << "hello" << true << std::endl;
-	std::cout << "n + 5 = " << n + 5 << '\n';
-	std::cout << "면적은 " << area(n);
-}
-double area(int r) {
-	return  3.14 * r * r;
+	Rectangle rect;
+	rect.width = 3;
+	rect.height = 5;
+	cout << "사각형의 면적은 " << rect.getArea() << endl;
+
+	return 0;
 }
