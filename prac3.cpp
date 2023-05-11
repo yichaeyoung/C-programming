@@ -1,32 +1,17 @@
 #include <iostream>
 using namespace std;
 
-class Circle {
-public:
-	int radius;
-	Circle();
-	Circle(int r);
-	double getArea();
-};
-Circle::Circle() {
-	radius = 1;
-	cout << "반지름 " << radius << "원 생성" << endl;
-}
-
-Circle::Circle(int r) {
-	radius = r;
-	cout << "반지름 " << radius << "원 생성" << endl;
-}
-double Circle::getArea() {
-	return
-	 3.14 * radius * radius;
-}
 int main() {
-	Circle donut;
-	double area = donut.getArea();
-	cout << "donut 면적은 " << area << endl;
+	cout << "너비를 입력하세요 :";
 
-	Circle pizza(30);
-	area = pizza.getArea();
-	cout << "pizza 면적은 " << area << endl;
+	int width;
+	cin >> width;
+
+	cout << "높이를 입력하세요: ";
+
+	int height;
+	cin >> height;
+
+	int area = width * height;
+	cout << "면적은 " << area << "\n";
 }
