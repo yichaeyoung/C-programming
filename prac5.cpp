@@ -1,16 +1,18 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-inline int odd(int x) {
-	return (x % 2);
-}
 int main() {
-	int sum = 0;
-
-	for (int i = 1; i <= 10000; i++) {
-		if (odd(i)) // 1 = true, 0 = false로 판단해서 홀수를 전부 더함
-			sum += i;
-
+	char password[11];
+	cout << "프로그램을 종료하려면 암호를 입력하세요" << endl;
+	while (true) {
+		cout << "암호>>";
+		cin >> password;
+		if (strcmp(password, "C++") == 0) {
+			cout << "프로그램을 정상 종료합니다." << endl;
+			break;
+		}
+		else
+			cout << "암호가 틀립니다." << endl;
 	}
-	cout << sum;
 }
